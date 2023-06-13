@@ -1,0 +1,44 @@
+
+body{
+    background-color: #006d9c;
+    height: 100hv;
+}
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: aquamarine;
+    height: 100hv;  
+}
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4c91af;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  p#result {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  

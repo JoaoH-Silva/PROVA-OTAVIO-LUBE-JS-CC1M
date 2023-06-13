@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Senha</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <!--Título principal -->
+        <h1>Confirmador de Palavra-chave:</h1>
+        
+        <!-- aba para digitar a senha -->
+        <label for="senhaInput">Digite uma senha:</label>
+        <input type="password" id="senhaInput">
+        
+        <!-- Botão para  validar -->
+        <button onclick="validarSenha()">Confirmar</button>
+        
+        <!-- exibição da validação -->
+        <p id="resultado"></p>
+    </div>
+
+    <!-- Script para a  senha -->
+    <script>
+        function validarSenha() {
+            // Senha digitada pelo cliente
+            var senha = document.getElementById("senhaInput").value;
+    
+            // Verificação dos critérios pedidos
+            var temTamanhoMinimo = senha.length >= 8;
+            var temLetraMaiuscula = /[A-Z]/.test(senha);
+            var temLetraMinuscula = /[a-z]/.test(senha);
+            var temNumero = /\d/.test(senha);
+    
+            //  exibir o resultado
+            var resultadoElemento = document.getElementById("resultado");
+    
+            // Resultado da validação
+            if (temTamanhoMinimo && temLetraMaiuscula && temLetraMinuscula && temNumero) {
+                resultadoElemento.textContent = "Senha válida";
+            } else {
+                resultadoElemento.textContent = "Senha inválida";
+            }
+        }
+    </script>
+    
+</body>
+</html>

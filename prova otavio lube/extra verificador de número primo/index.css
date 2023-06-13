@@ -1,0 +1,46 @@
+body {
+    background-color: #a0d1d7;
+  
+}
+
+.container {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: cadetblue;
+}
+
+h2 {
+    color: white;
+    border: 2px solid black;
+   
+    background-color: #0163db;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+    border: 3px solid black;
+    background-color: #24cddd;
+}
+
+input[type="number"] {
+    padding: 5px;
+    width: 55%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0163db;
+    color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 8px;
+}
+
+p#result {
+    color: white;
+}

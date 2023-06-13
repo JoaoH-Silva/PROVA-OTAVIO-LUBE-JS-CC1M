@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Números Primos</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Verificador de Número Primo:</h2>
+        
+        <label for="numeroInput">Digite um Valor:</label>
+        <input type="number" id="numeroInput">
+        
+        <button onclick="verificarPrimo()">Verificar</button>
+        
+        <p id="resultado"></p>
+    </div>
+</body>
+
+<script>
+    function verificarPrimo() {
+        // Obter o número digitado pelo usuário
+        var numero = document.getElementById("numeroInput").value;
+        
+        // Variável para armazenar se o número é primo
+        var ehPrimo = true;
+        
+        // Verificar se o número é menor que 2 (números menores que 2 não são primos)
+        if (numero < 2) {
+            ehPrimo = false;
+        } else {
+            // Verificar se o número é divisível por algum número entre 2 e a sua raiz quadrada
+            for (var i = 2; i <= Math.sqrt(numero); i++) {
+                if (numero % i === 0) {
+                    // Se for divisível, o número não é primo
+                    ehPrimo = false;
+                    break;
+                }
+            }
+        }
+        
+        // Elemento HTML para exibir o resultado
+        var resultadoElemento = document.getElementById("resultado");
+        
+        // Exibir o resultado de acordo com se o número é primo ou não
+        if (ehPrimo) {
+            resultadoElemento.textContent = numero + " é um número primo.";
+        } else {
+            resultadoElemento.textContent = numero + " não é um número primo.";
+        }
+    }
+</script>
+</html>
